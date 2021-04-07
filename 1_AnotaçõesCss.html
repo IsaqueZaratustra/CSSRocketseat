@@ -1,0 +1,146 @@
+<!--
+/*Comentários
+-Não irá afetar o seu código
+-Ajuda a lembrar blocos de códigos
+-Ajuda outros a entenderem 
+-Nunca esqueça de fechar um comentário aberto
+*/
+-->
+
+h1{
+   color:blue;
+   font-size:60px;
+   background:gray;}
+<!--
+   #Anatomia
+
+*selector (ex:h1)
+*declaration (ex:color:blue;font-size: 60px;background: gray;)
+*properties (ex:color)
+*property value (ex:blue)
+-->
+<!--
+   #Selectors
+Conecta um elemento HTML com o CSS
+      #Tipos
+*Global selector `*`
+*Element/Type selector `h1,h2,p,div`
+*ID Selector `#box,#container`
+*Class selector `.red, .m-4`
+*Attribute selector, Pseudo-class, pseudo-element, e outros
+-->
+<!--
+   #Caixas
+*Você irá perceber que (quase)tudo são caixas do CSS;
+*Posicionamento ,tamanhos,espaçamentos,bordas,cores;
+*Caixa pode ficar ao lado da outra ,ou acima;
+*Elemento HTML são caixas.
+--><!--
+   #Origem do CSS
+*<link rel="stylesheet" href="style.css">
+*Escrever no próprio Body do HTML   
+--><!--
+   # A Cascata (cascading)
+A escolha do browser de qual regra aplicar,caso haja muitas regras para o msemo elemento
+*Seu estilo é lido de cima para baixo(Com preferência no que vem de baixo)
+
+É levado em consideração 3 fatores
+   1.Origem do estilo
+   2.Especificidade
+   3.Importância
+
+   ### Origem do estilo
+Inline>Tag style>Tag link
+
+   ### Especificidade   
+É um cálculo matemático,onde,cada tipo de seletor e origem do estilo,possuem valores a serem considerados.
+0. Universal selector, combinators e negation pseudo-class (:not())
+1. Element type selector e pseudo-elements (::before,::after)
+10. Classes e attribute selectors ([type="radio"])
+100. ID selector
+1000. Inline
+
+   ### A regra !important
+* cuidado, evite o uso;
+* não é considerado uma boa prática;
+* quebra o fluxo natural da cascata.
+--><!--
+   # At-rules
+* Está relacionado ao comportamento do CSS
+* começa com o sinal @ seguido do identificador e valor
+   # Exemplos comuns
+- @import   /* incluir um DSS externo */
+- @media    /* regras condicionadas para dispositivos */
+- @font-face/* fontes externas */
+- @keyframes/* Animation */
+
+Ex:
+   @import url("http://local.com/style.css");
+
+   @media (min-width: 500px){
+      /* rules here*/
+   }
+   @font-face{
+      /* rules here */
+   }
+   @keyframes nameofanimation {
+      /* rules here */
+   }
+--><!--
+   # Shorthand
+* junção de propriedades
+* resumido
+* legível
+
+Ex:
+  /* background properties */
+background-color: #000;
+background-image: url(images/bg.gif);
+background-repeat: no-repeat;
+background-position: left top;
+
+  /* background shorthand */
+background: #000 url(images/bg.gif) no-repeat left top;
+
+  /* font properties */
+font-style: italic;
+font-weight: bold;
+font-size: .8em;
+line-height: 1.2;
+font-family: Arial, sans-serif;
+  
+  /* font shorthand */
+font: italic bold .8em/1.2 Arial, sans-serif;
+
+   # Detalhes
+* não irá considerar propriedades anteriores
+* valores não especificados irão assumir o valor padrão 
+* geralmente, a ordem descrita não importa , mas, se houver muitas propriedades com valores semelhantes , podemos encontrar problemas  
+--><!--
+   #Funções
+* nome seguido de abre e fecha parêntesis
+* recebe argumentos
+
+Ex:
+
+@import url("http://urlaqui.com/style.css");
+{
+   color: rgd(255, 0, 100)
+   width: calc(100% - 10px)
+}
+--><!--
+   #Ferramenta DevTools
+*Digitar F12 no Navegador
+--><!--
+   # Vendor Prefixes
+Permite que browsers adicione "features" a fim de colocar em uso alguma novidade que vemos no CSS
+
+Ex:
+ CSS
+  p {
+     -webkit-background-clip: text;         /* Chrome, Safari, iOS e Android*/
+     -moz-background-clip: text;          /* Mozilla (Firefox)*/
+     -ms-background-clip: text;          /* Internet Explorer */
+     -o-background-clip: text;          /* Opera */
+  }
+-->
